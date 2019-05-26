@@ -1,0 +1,14 @@
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DomainModel.deps.json
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DomainModel.dll
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.csprojAssemblyReference.cache
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.csproj.CoreCompileInputs.cache
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfoInputs.cache
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.AssemblyInfo.cs
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DataTransition.dll
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DomainModel.pdb
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DataTransition.pdb
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.csproj.CopyComplete
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.dll
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\obj\Debug\netcoreapp2.1\DomainModel.pdb
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DomainModel.runtimeconfig.json
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DomainModel\bin\Debug\netcoreapp2.1\DomainModel.runtimeconfig.dev.json

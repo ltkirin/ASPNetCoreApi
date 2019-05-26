@@ -1,0 +1,9 @@
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\bin\Debug\netcoreapp2.1\DataTransition.deps.json
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\bin\Debug\netcoreapp2.1\DataTransition.dll
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\bin\Debug\netcoreapp2.1\DataTransition.pdb
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.csproj.CoreCompileInputs.cache
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.AssemblyInfoInputs.cache
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.AssemblyInfo.cs
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.dll
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.pdb
+D:\Development\Repo\ASPNetCoreApi\ASPNetCoreApi\DataTransition\obj\Debug\netcoreapp2.1\DataTransition.csprojAssemblyReference.cache
