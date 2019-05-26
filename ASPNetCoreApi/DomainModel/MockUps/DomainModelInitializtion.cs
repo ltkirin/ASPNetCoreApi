@@ -1,5 +1,7 @@
 ﻿using DataTransition.DataManagement;
+using DataTransition.Service;
 using DomainModel.DAO;
+using DomainModel.Service.authorization;
 
 namespace DomainModel.MockUps
 {
@@ -12,6 +14,7 @@ namespace DomainModel.MockUps
         {
             DataManager.Instance.TeamDAO = new TeamDAO();
             DataManager.Instance.UserDAO = new UserDAO();
+            AuthorizationService.Instance.UserContext = new UserContext();
         }
     }
 }

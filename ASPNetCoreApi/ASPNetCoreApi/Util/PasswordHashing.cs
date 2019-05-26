@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ASPNetCoreApi.Util
 {
     public static class PasswordHashing
     {
-        private static string ComputeHash(string password, string username)
+        public static string ComputeHash(string password, string username)
         {
             string passwordHash = ComputePasswordHash(password);
             string salt = Salt(username);
