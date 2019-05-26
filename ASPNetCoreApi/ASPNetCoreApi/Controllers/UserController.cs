@@ -18,11 +18,12 @@ namespace ASPNetCoreApi.Controllers
     /// <summary>
     /// Controller for User operations
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("/api")]
     [ApiController]
     public class UserController : ControllerBase
     {
         [HttpPost]
+        [Route("/register")]
         public ObjectResult RegisterUser(string login, string password)
         {
             int responseCode = 0;
@@ -64,6 +65,7 @@ namespace ASPNetCoreApi.Controllers
             return StatusCode(responseCode, responseMessage);
 
         }
+        [Route("/authorize")]
         [HttpGet]
         public ObjectResult Authorize(string login, string password)
         {
@@ -105,6 +107,22 @@ namespace ASPNetCoreApi.Controllers
                 }
             }
             return StatusCode(responseCode, responseMessage);
+        }
+
+        [HttpPut]
+        public ObjectResult SetCallsign(string login, string callsign)
+        {
+            int responseCode = 0;
+            string responseMessage = string.Empty;
+            if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(callsign))
+            {
+                DataManager.Instance.Find()
+
+            }
+            else
+            {
+                responseCode = 400;
+            }
         }
 
     }

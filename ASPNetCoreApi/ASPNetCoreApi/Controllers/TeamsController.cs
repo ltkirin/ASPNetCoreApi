@@ -4,6 +4,7 @@ using ASPNetCoreApi.Models;
 using ASPNetCoreApi.Models.Factory;
 using DataTransition.DataManagement;
 using DataTransition.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ASPNetCoreApi.Controllers
@@ -11,7 +12,7 @@ namespace ASPNetCoreApi.Controllers
     /// <summary>
     /// Controller for Teams operations
     /// </summary>
-    [Route("teams/[controller]")]
+    [Route("/teams")]
     [ApiController]
     public class TeamsController : ControllerBase
     {
@@ -21,6 +22,7 @@ namespace ASPNetCoreApi.Controllers
         /// <param name="title">New team title</param>
         /// <returns>Adding operation response code and messageS</returns>
         [HttpPost]
+        [Route("/addteam")]
         public ObjectResult AddTeam(string title)
         {
             int responseCode = 0;

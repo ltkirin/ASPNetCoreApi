@@ -36,5 +36,10 @@ namespace ASPNetCoreApi.Models.Factory
         {
             return new UserModel(id, login, password);
         }
+
+        public UserModel GetEmpty()
+        {
+            return new UserModel();
+        }
     }
 }

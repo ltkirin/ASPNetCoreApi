@@ -50,5 +50,10 @@ namespace ASPNetCoreApi.Models.Factory
         {
             return userFactory.Get(props);
         }
+
+        public GetEmptyUserModel()
+        {
+
+        }
     }
 }

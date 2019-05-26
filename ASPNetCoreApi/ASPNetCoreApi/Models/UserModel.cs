@@ -9,6 +9,9 @@ namespace ASPNetCoreApi.Models
         private string callsign;
         private TeamModel team;
 
+        public UserModel() : base()
+        { }
+
         public UserModel(string login, string passwordHash) : base()
         {
             this.login = login;
