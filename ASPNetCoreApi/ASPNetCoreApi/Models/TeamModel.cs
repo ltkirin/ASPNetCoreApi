@@ -12,6 +12,11 @@ namespace ASPNetCoreApi.Models
     public class TeamModel : BaseModel
     {
         private string title;
+
+        public TeamModel() : base()
+        {
+        }
+
         /// <summary>
         /// Create new Team model with no Id value
         /// </summary>

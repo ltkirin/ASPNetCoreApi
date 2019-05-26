@@ -10,8 +10,18 @@
         /// </summary>
         SaveOK = 200,
         /// <summary>
-        /// Name of the object is allready taken. Sae operation canceled
+        /// Name of the object is allready taken. Save operation canceled
         /// </summary>
-        NameAllreadyTaken = 410
+        NameAllreadyTaken = 410,
+        /// <summary>
+        /// Entity to update was not found in database. Update canceled
+        /// </summary>
+        EntityToUpdateNotFound = 412,
+        /// <summary>
+        /// Attempt to update Entity with equal paramataers to other entities. Update canceled
+        /// </summary>
+        MultipleEntitiesToUpdateFound = 413
+
+
     }
 }

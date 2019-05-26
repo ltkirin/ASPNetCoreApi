@@ -3,6 +3,7 @@ using DataTransition.DTO;
 using DataTransition.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataTransition.DataManagement
 {
@@ -65,15 +66,49 @@ namespace DataTransition.DataManagement
 
         public IList<BaseDTO>Find(BaseDTO searchParamaters)
         {
-            if(searchParamaters is TeamDTO)
+            List<BaseDTO> listToReturn = new List<BaseDTO>();
+            if (searchParamaters is TeamDTO)
             {
-                return teamDAO.Find(searchParamaters as TeamDTO) as IList<BaseDTO>;
+                IList<TeamDTO> teams = teamDAO.Find(searchParamaters as TeamDTO);
+                foreach(TeamDTO team in teams)
+                {
+                    listToReturn.Add(team as BaseDTO);
+                }
             }
-            if(searchParamaters is UserDTO)
+            else if(searchParamaters is UserDTO)
             {
-                return userDAO.Find(searchParamaters as UserDTO) as IList<BaseDTO>;
+                IList<UserDTO> users = userDAO.Find(searchParamaters as UserDTO);
+
+                foreach (UserDTO user in users)
+                {
+                    listToReturn.Add(user as BaseDTO);
+                }
             }
-            throw new Exception($"{searchParamaters} is invalid search object");
+            else
+            {
+                throw new Exception($"{searchParamaters} is invalid search object");
+            }
+            return listToReturn;
         }
+
+        /// <summary>
+        /// Try to save a new object to the Database
+        /// </summary>
+        /// <param name="objectToSave">Object to save</param>
+        /// <returns>Save action response code</returns>
+        public int Update(BaseDTO objectToSave)
+        {
+            if (objectToSave is TeamDTO)
+            {
+                return teamDAO.Update(objectToSave as TeamDTO);
+            }
+            if (objectToSave is UserDTO)
+            {
+                return userDAO.Update(objectToSave as UserDTO);
+            }
+            // If no DAO  for saving was found, Bad Request code is returned
+            return 400;
+        }
+
     }
 }

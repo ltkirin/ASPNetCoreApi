@@ -3,7 +3,7 @@ using DataTransition.Interfaces;
 using DomainModel.DAO.enums;
 using DomainModel.DataConversion;
 using DomainModel.DbModel;
-using DomainModel.Entity.common;
+using DomainModel.Entity.team;
 using DomainModel.Entity.user;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,8 +48,11 @@ namespace DomainModel.DAO
 
                 if (foundEntities.Any())
                 {
-                    
-                    result.AddRange(DataConverter.Instance.GetDTO(foundEntities as IList<EntityBase>) as IList<UserDTO>);
+                    foreach (User user in foundEntities)
+                    {
+                        result.Add(DataConverter.Instance.GetDTO(user) as UserDTO);
+                    }
+
                 }
             }
 
@@ -75,5 +78,36 @@ namespace DomainModel.DAO
             }
 
         }
+
+        public int Update(UserDTO dtoToIUpdate)
+        {
+            if (dtoToIUpdate.Id == 0)
+            {
+                return (int)SaveStatusCode.EntityToUpdateNotFound;
+            }
+            IList<User> searchResult;
+            using (AirsoftBaseContext context = new AirsoftBaseContext())
+            {
+                searchResult = context.Users.Where(t => t.Id == dtoToIUpdate.Id).ToList();
+
+                if (!searchResult.Any())
+                {
+                    return (int)SaveStatusCode.EntityToUpdateNotFound;
+                }
+                if (searchResult.Count > 1)
+                {
+                    return (int)SaveStatusCode.MultipleEntitiesToUpdateFound;
+                }
+                searchResult[0].Callsign = dtoToIUpdate.Callsign;
+                if (dtoToIUpdate.Team != null)
+                {
+                    searchResult[0].Team = DataConverter.Instance.GetEntity(dtoToIUpdate.Team) as Team;
+                }
+                searchResult[0].Login = dtoToIUpdate.Login;
+                context.SaveChanges();
+                return (int)SaveStatusCode.SaveOK;
+            }
+        }
     }
 }
+

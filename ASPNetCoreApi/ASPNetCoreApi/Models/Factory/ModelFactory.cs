@@ -51,9 +51,13 @@ namespace ASPNetCoreApi.Models.Factory
             return userFactory.Get(props);
         }
 
-        public GetEmptyUserModel()
+        public UserModel GetEmptyUserModel()
         {
-
+            return userFactory.GetEmpty();
+        }
+        public TeamModel GetEmptyTeamModel()
+        {
+            return teamFactory.GetEmpty();
         }
     }
 }

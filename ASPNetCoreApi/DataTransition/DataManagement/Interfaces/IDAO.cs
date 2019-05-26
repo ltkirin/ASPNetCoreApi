@@ -22,5 +22,8 @@ namespace DataTransition.Interfaces
         /// <param name="searchParameeters">DTO with search parmeters</param>
         /// <returns>Collection of found objects (empty, if there were none)</returns>
         IList<T> Find(T searchParameeters);
+
+        int Update(T dtoToIUpdate);
+        
     }
 }

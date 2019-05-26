@@ -35,7 +35,7 @@ namespace DomainModel.DAO
                     foundEntity = context.Teams
                         .Where(t => t.Id == searchParameeters.Id)
                         .FirstOrDefault();
-                  
+
                 }
                 else
                 {
@@ -75,6 +75,31 @@ namespace DomainModel.DAO
                 }
             }
 
+        }
+
+        public int Update(TeamDTO dtoToIUpdate)
+        {
+            if (dtoToIUpdate.Id == 0)
+            {
+                return (int)SaveStatusCode.EntityToUpdateNotFound;
+            }
+            IList<Team> searchResult;
+            using (AirsoftBaseContext context = new AirsoftBaseContext())
+            {
+                searchResult = context.Teams.Where(t => t.Id == dtoToIUpdate.Id).ToList();
+
+                if (!searchResult.Any())
+                {
+                    return (int)SaveStatusCode.EntityToUpdateNotFound;
+                }
+                if (searchResult.Count > 1)
+                {
+                    return (int)SaveStatusCode.MultipleEntitiesToUpdateFound;
+                }
+                searchResult[0].Title = dtoToIUpdate.Title;
+                context.SaveChanges();
+                return (int)SaveStatusCode.SaveOK;
+            }
         }
     }
 }

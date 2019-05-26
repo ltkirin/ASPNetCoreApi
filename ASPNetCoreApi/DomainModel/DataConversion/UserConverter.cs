@@ -19,7 +19,7 @@ namespace DomainModel.DataConversion
             dto.Id = entity.Id;
             dto.Login = entity.Login;
             dto.PasswordHash = entity.PasswordHash;
-            if(string.IsNullOrEmpty(entity.Callsign))
+            if(!string.IsNullOrEmpty(entity.Callsign))
             {
                 dto.Callsign = entity.Callsign;
             }

@@ -43,5 +43,10 @@ namespace ASPNetCoreApi.Models.Factory
             }
             return Get(props);
         }
+
+        public TeamModel GetEmpty()
+        {
+            return new TeamModel();
+        }
     }
 }
