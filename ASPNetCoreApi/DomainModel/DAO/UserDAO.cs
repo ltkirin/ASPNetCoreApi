@@ -101,7 +101,7 @@ namespace DomainModel.DAO
                 searchResult[0].Callsign = dtoToIUpdate.Callsign;
                 if (dtoToIUpdate.Team != null)
                 {
-                    searchResult[0].Team = DataConverter.Instance.GetEntity(dtoToIUpdate.Team) as Team;
+                    searchResult[0].Team = context.Teams.Where(t => t.Id == dtoToIUpdate.Team.Id).FirstOrDefault();
                 }
                 searchResult[0].Login = dtoToIUpdate.Login;
                 context.SaveChanges();
